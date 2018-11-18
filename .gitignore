@@ -4,6 +4,9 @@
 # output directory
 out/
 
+#idea directory
+.idea
+
 # Log file
 *.log
 
