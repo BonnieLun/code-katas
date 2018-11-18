@@ -1,10 +1,11 @@
+package com.byinal;
+
 import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class PairOfSocks {
-
 
     public static void main(String[] args) {
         int[] array = {10, 20, 20, 10, 10, 30, 50, 10, 20};
@@ -21,5 +22,4 @@ public class PairOfSocks {
 
         System.out.println("You have " + Math.toIntExact(count) + " pair/s");
     }
-
 }

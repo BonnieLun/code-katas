@@ -1,3 +1,5 @@
+package com.byinal
+
 class NonRepeatingChar {
 
     companion object {
@@ -38,7 +40,7 @@ class CountIndex(var count: Int = 0,
     }
 
     override fun toString(): String {
-        return "CountIndex(count=$count, index=$index)"
+        return "com.byinal.CountIndex(count=$count, index=$index)"
     }
 
 }

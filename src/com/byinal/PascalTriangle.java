@@ -1,3 +1,5 @@
+package com.byinal;
+
 public class PascalTriangle {
 
     public static void main(String[] args) {
