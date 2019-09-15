@@ -9,23 +9,13 @@ public class Node {
         this.data = d;
     }
 
-    public void appendToTail(int newData) {
-        Node newNode = new Node(newData);
-        Node n = this;
-        while (n.next != null) {
-            n = n.next;
-        }
-        n.next = newNode;
-    }
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        Node n = this;
-        while (n != null) {
-            builder.append(n.data);
-            n = n.next;
-        }
-        return builder.toString();
+        final StringBuilder sb = new StringBuilder("Node{");
+        sb.append("next=").append(next);
+        sb.append(", data=").append(data);
+        sb.append('}');
+        return sb.toString();
     }
 }
