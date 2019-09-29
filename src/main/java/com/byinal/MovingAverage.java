@@ -31,11 +31,10 @@ public class MovingAverage {
             avg = sum / numberList.size();
         } else {
             int numberListSize = numberList.size();
-            while(n > 0){
-                System.out.println(numberList.get(numberListSize - n));
-                System.out.println(sum);
-                sum += numberList.get(numberListSize - n);
-                n--;
+            int countNumbersToSum = n;
+            while(countNumbersToSum > 0){
+                sum += numberList.get(numberListSize - countNumbersToSum);
+                countNumbersToSum--;
             }
             avg = sum / n;
         }
