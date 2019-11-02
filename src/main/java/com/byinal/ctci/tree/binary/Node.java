@@ -35,4 +35,14 @@ public class Node {
     public void setRight(Node right) {
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Node{");
+        sb.append("data=").append(data);
+//        sb.append(", left=").append(left);
+//        sb.append(", right=").append(right);
+        sb.append('}');
+        return sb.toString();
+    }
 }

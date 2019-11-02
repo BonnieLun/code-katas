@@ -1,5 +1,7 @@
 package com.byinal.ctci.linkedLists;
 
+import java.util.Objects;
+
 public class Node {
 
     Node next = null;
@@ -17,5 +19,19 @@ public class Node {
         sb.append(", data=").append(data);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Node node = (Node) o;
+        return data == node.data &&
+                Objects.equals(next, node.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(next, data);
     }
 }

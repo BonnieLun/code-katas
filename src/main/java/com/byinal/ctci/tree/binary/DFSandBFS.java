@@ -1,7 +1,6 @@
 package com.byinal.ctci.tree.binary;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class DFSandBFS {
 
@@ -20,6 +19,9 @@ public class DFSandBFS {
         dFSandBFS.bfs(root);
 
         System.out.println("isBFSValid: " + dFSandBFS.verify(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
+
+        int heightOfTree = dFSandBFS.heightOfTree(root);
+        System.out.println("Height of Tree: " + heightOfTree);
     }
 
     private void dfsInOrder(Node root) {
@@ -78,6 +80,15 @@ public class DFSandBFS {
             boolean rightValid = verify(root.right, root.data, max) && root.data > min;
             return leftValid && rightValid;
         }
+    }
+
+    private int heightOfTree(Node root) {
+        if(root == null){
+            return -1; //decide height of root's position.
+        }
+        int left = heightOfTree(root.left);
+        int right = heightOfTree(root.right);
+        return 1 + Math.max(left, right);
     }
 
     private Node createBST(Node root) {
